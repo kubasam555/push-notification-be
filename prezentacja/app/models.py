@@ -9,6 +9,7 @@ from django.contrib.auth import get_user_model
 
 class Notification(models.Model):
     user = models.ForeignKey(get_user_model())
+    title = models.CharField(max_length=255, blank=True, null=True)
     message = models.CharField(max_length=255)
 
     def __unicode__(self):
